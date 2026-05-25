@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Brainstorm Mozambique</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+
+      <div class="logo-area">
+        <img src="assets/img/logo.png" alt="Logo">
+        <h1>Brainstorm Mozambique</h1>
+      </div>
+
+      <!--<a href="#briefing" class="btn-primary">
+        Preencher Briefing
+      </a>-->
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+  <div class="container hero-content">
+
+    <div class="hero-msg">
+
+      <h2>
+        Conexões e Soluções
+      </h2>
+
+      <p>
+        Olá, Halen! Ajuda-me a estruturar o website oficial da Brainstorm Mozambique.
+      </p>
+
+    </div>
+
+    <div class="hero-badges">
+
+      <span>Comunidade</span>
+      <span>Networking</span>
+      <span>Projetos</span>
+      <span>Execução</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- BRIEFING -->
+  <section id="briefing" class="briefing-section">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Briefing Estratégico do Website</h2>
+
+        <p>
+          Preencha os campos abaixo.
+        </p>
+      </div>
+<!--section class="progress-wrapper">
+<div class="progress-wrapper">
+
+  <div class="progress-info">
+
+    <span>
+      Progresso do briefing
+    </span>
+
+    <span id="progressPercent">
+      0%
+    </span>
+
+  </div>
+
+  <div class="progress-bar">
+
+    <div
+      class="progress-fill"
+      id="progressFill"
+    ></div>
+
+  </div>
+
+</div>
+</section-->
+      <!-- FORM -->
+      <form
+  id="briefingForm" action="https://formspree.io/f/mzdwvzny"
+  method="POST" enctype="multipart/form-data"
+>
+<input
+  type="hidden"
+  name="_subject"
+  value="Novo Briefing - Brainstorm Mozambique"
+/>
+<input
+  type="hidden"
+  name="_template"
+  value="table"
+/>
+<input
+  type="hidden"
+  name="_captcha"
+  value="false"
+/>
+        <!-- SECÇÃO 1 -->
+        <div class="card">
+
+          <h3>Início</h3>
+
+          <div class="field">
+            <label>Nome do responsável</label>
+            <input type="text" name="responsavel" placeholder="Nome completo">
+          </div>
+
+        </div>
+
+        <!-- SECÇÃO 2 -->
+        <div class="card">
+
+          <h3>Identidade</h3>
+
+          <div class="grid-2">
+
+            <div class="field">
+              <label>Nome oficial da organização</label>
+              <input type="text" name="organizacao">
+            </div>
+
+            <div class="field">
+              <label>Slogan</label>
+              <input type="text" name="slogan">
+            </div>
+
+          </div>
+
+          <div class="field">
+            <label>Descrição curta</label>
+            <textarea name="descricao" placeholder="Descrição da Organização"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Já possui identidade visual?</label>
+
+            <select id="identidadeVisual" name="possui_id_visual">
+              <option value="">Selecionar</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- IDENTIDADE VISUAL -->
+        <div class="card hidden" id="identidadeBox">
+
+          <h3>Identidade Visual</h3>
+
+          <div class="field">
+            <label>Logotipo</label>
+            <textarea name="logo_link" placeholder="Adicione o link da imagem da pasta da logo no Google Drive"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Cores oficiais</label>
+            <input type="text" name="cor" placeholder="Azul, Vermelho...">
+          </div>
+
+          <div class="field">
+            <label>Existe manual de marca?</label>
+
+            <select id="manualMarca" name="existe_manual_marca">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- OBJECTIVO -->
+        <div class="card">
+
+          <h3>Objectivo do Site</h3>
+
+          <div class="field">
+            <label>Principal objectivo</label>
+
+            <select id="objetivoSite" name="objetivo">
+
+              <option value="">Selecionar</option>
+
+              <option>
+                Apresentar a comunidade
+              </option>
+
+              <option value="membros">
+                Atrair novos membros
+              </option>
+
+              <option>
+                Gerar networking e credibilidade
+              </option>
+
+              <option>
+                Divulgação de projetos
+              </option>
+
+              <option>
+                Outro
+              </option>
+
+            </select>
+          </div>
+
+        </div>
+
+        <!-- CAPTAÇÃO -->
+        <div class="card hidden" id="captacaoBox">
+
+          <h3>Captação de Membros</h3>
+
+          <div class="field">
+            <label>Permitir inscrição?</label>
+
+            <select name="permitir_inscricao">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Tipo de inscrição</label>
+
+            <select name="tipo_inscricao">
+<option value="">Selecionar</option>
+              <option>Simples</option>
+              <option>Completa</option>
+              <option>Com aprovação manual</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- FUNCIONAMENTO -->
+        <div class="card">
+
+          <h3>Funcionamento</h3>
+
+          <div class="field">
+            <label>
+              Explica como funciona a Brainstorm Mozambique
+            </label>
+
+            <textarea name="como_funciona"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Existem níveis?</label>
+
+            <select id="hierarquia" name="existem_niveis">
+
+              <option value="">Selecionar</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+
+            </select>
+          </div>
+
+        </div>
+
+        <!-- ESTRUTURA -->
+        <div class="card hidden" id="estruturaBox">
+
+          <h3>Estrutura Interna</h3>
+
+          <div class="field">
+            <label>Quantos níveis?</label>
+            <input type="number" name="quantos_niveis">
+          </div>
+
+          <div class="field">
+            <label>Mostrar níveis publicamente?</label>
+
+            <select name="mostrar_niveis_publicamente">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+              <option>Apenas parcialmente</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Acesso ao conteúdo</label>
+
+            <select id="acessoRestrito" name="acesso_conteudo">
+
+              <option value="">Selecionar</option>
+
+              <option>Público</option>
+
+              <option value="restrito">
+                Restrito
+              </option>
+
+            </select>
+          </div>
+
+        </div>
+
+        <!-- ÁREA PRIVADA -->
+        <div class="card hidden" id="privadaBox">
+
+          <h3>Área Privada</h3>
+
+          <div class="field">
+            <label>Quem terá acesso?</label>
+
+            <select name="quem_tera_acesso">
+<option value="">Selecionar</option>
+              <option>Membros aprovados</option>
+              <option>Núcleo apenas</option>
+              <option>Todos os membros</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Precisa login?</label>
+
+            <select name="precisa_login">
+    <option value="">Selecionar</option>          
+<option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- ESTRUTURA -->
+        <div class="card">
+
+          <h3>Estrutura do Site</h3>
+
+          <div class="checkbox-grid">
+
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="inicio"><span class="checkmark"></span> <span>Início</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="sobre_nos"><span class="checkmark"></span> <span>Sobre nós</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="como_funciona"><span class="checkmark"></span> <span>Como funciona</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="projetos"><span class="checkmark"></span> <span>Projetos</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="contacto"><span class="checkmark"></span> <span>Contacto</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="inscricao"><span class="checkmark"></span> <span>Inscrição</span></label>
+            <label class="check-card"><input type="checkbox" name="paginas[]" value="blog"><span class="checkmark"></span> <span>Blog</span></label>
+
+          </div>
+
+          <div class="field">
+            <label>Já existem textos prontos?</label>
+
+            <select name="textos_prontos">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- DESIGN -->
+        <div class="card">
+
+          <h3>Design</h3>
+
+          <div class="field">
+
+            <label>Estilo do site</label>
+
+            <select name="estilo_do_site">
+<option value="">Selecionar</option>
+              <option>Corporativo e sério</option>
+              <option>Moderno e minimalista</option>
+              <option>Criativo e comunitário</option>
+              <option>Impactante e agressivo</option>
+
+            </select>
+
+          </div>
+
+          <div class="field">
+            <label>Sites de referência</label>
+            <input type="text" name="sites_de_referencia">
+          </div>
+
+        </div>
+
+        <!-- FUNCIONALIDADES -->
+        <div class="card">
+
+          <h3>Funcionalidades</h3>
+
+          <div class="checkbox-grid">
+
+            
+<label class="check-card">
+
+  <input type="checkbox" name="funcionalidades[]"
+  value="Formulario de inscricao">
+
+  <span class="checkmark"></span>
+
+  <span>
+    Formulário de inscrição
+  </span>
+
+</label>
+
+          <label class="check-card">
+              <input type="checkbox" name="funcionalidades[]"
+              value="Integracao WhatsApp">
+              <span class="checkmark"></span>
+             <span>Integração com WhatsApp</span>
+            </label>
+
+            <label class="check-card">
+              <input type="checkbox" id="projetosCheck" name="funcionalidades[]">
+              <span class="checkmark"></span>
+              <span>Sistema de projetos</span>
+            </label>
+
+            <label class="check-card">
+
+  <input type="checkbox" name="funcionalidades[]">
+
+  <span class="checkmark"></span>
+
+  <span>
+    Área de membros
+  </span>
+
+</label>
+
+            <label class="check-card">
+              <input type="checkbox" name="funcionalidades[]">
+              <span class="checkmark"></span>
+              <span>Publicação de eventos</span>
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- PROJETOS -->
+        <div class="card hidden" id="projetosBox">
+
+          <h3>Projetos</h3>
+
+          <div class="field">
+
+            <label>Gestão de projetos</label>
+
+            <select name="gestao_de_projetos">
+<option value="">Selecionar</option>
+              <option>
+                Aprovados pela administração
+              </option>
+
+              <option>
+                Abertos para membros
+              </option>
+
+              <option>
+                Votação comunitária
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="field">
+
+            <label>Sistema de votação?</label>
+
+            <select name="sistema_votacao">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <!-- COMUNICAÇÃO -->
+        <div class="card">
+
+          <h3>Comunicação</h3>
+
+          <div class="grid-2">
+
+            <div class="field">
+
+  <label>
+    WhatsApp oficial
+  </label>
+
+  <div class="input-icon">
+
+    <span class="input-icon-left">
+      +258
+    </span>
+
+    <input
+      type="tel"
+      name="whatsapp_oficial"
+      id="whatsapp"
+      placeholder="84 000 0000"
+      maxlength="12"
+      required
+    >
+
+  </div>
+
+  <small class="field-info">
+    Número principal da organização.
+  </small>
+
+</div>
+
+            <div class="field">
+              <label>Redes sociais</label>
+              <input type="text" name="redes_sociais" placeholder="Instagram, Facebook, Tik Tok">
+            </div>
+
+          </div>
+
+          <div class="field">
+
+            <label>
+              Redirecionar para grupo de WhatsApp?
+            </label>
+
+            <select name="redirecionar_para_whatsapp">
+<option value="">Selecionar</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <!-- PRAZO -->
+        <div class="card">
+
+          <h3>Prazo e Execução</h3>
+
+          <div class="grid-2">
+
+            <div class="field">
+              <label>Existe prazo?</label>
+
+              <select name="existe_prazo">
+<option value="">Selecionar</option>
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Orçamento definido?</label>
+
+              <select name="orcamento_definido">
+<option value="">Selecionar</option>
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- EXTRAS -->
+        <div class="card">
+
+          <h3>Informações Extras</h3>
+
+          <div class="field">
+            <textarea rows="5" name="informacoes_extra" placeholder="Há mais alguma informação que queiras partilhar?"></textarea>
+          </div>
+
+        </div>
+
+        <button
+  type="submit"
+  class="btn-submit"
+  id="submitBtn"
+>
+
+ <span class="btn-text">
+  Enviar Briefing →
+</span>
+
+  <span class="loader hidden"></span>
+
+</button>
+
+      </form>
+
+    </div>
+
+<div id="toast"></div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Brainstorm Mozambique
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
